@@ -1,6 +1,6 @@
-package br.edu.uniesp.softfact.certificado;
+package br.edu.uniesp.softfact.zo.old.certificado;
 
-import br.edu.uniesp.softfact.aluno.Aluno;
+import br.edu.uniesp.softfact.infra.aluno.AlunoEntity;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -15,7 +15,7 @@ public class Certificado {
     private Long id;
 
     @ManyToOne(optional = false) @JoinColumn(name = "aluno_id")
-    private Aluno aluno;
+    private AlunoEntity aluno;
 
     @Column(nullable = false)
     private String descricao;

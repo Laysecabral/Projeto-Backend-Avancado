@@ -1,4 +1,4 @@
-package br.edu.uniesp.softfact.stack;
+package br.edu.uniesp.softfact.zo.old.stack;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;

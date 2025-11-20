@@ -1,4 +1,4 @@
-package br.edu.uniesp.softfact.exception;
+package br.edu.uniesp.softfact.config.exception;
 
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.dao.DataIntegrityViolationException;

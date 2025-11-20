@@ -1,9 +1,9 @@
-package br.edu.uniesp.softfact.aluno;
+package br.edu.uniesp.softfact.infra.aluno;
 
-import br.edu.uniesp.softfact.aluno.enums.Curso;
-import br.edu.uniesp.softfact.aluno.enums.Periodo;
-import br.edu.uniesp.softfact.certificado.Certificado;
-import br.edu.uniesp.softfact.stack.StackTecnologia;
+import br.edu.uniesp.softfact.shared.enums.Curso;
+import br.edu.uniesp.softfact.shared.enums.Periodo;
+import br.edu.uniesp.softfact.zo.old.certificado.Certificado;
+import br.edu.uniesp.softfact.zo.old.stack.StackTecnologia;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -20,7 +20,7 @@ import java.util.Set;
                 @UniqueConstraint(name = "uk_aluno_matricula", columnNames = "matricula")
         })
 @NoArgsConstructor @AllArgsConstructor @Builder
-public class Aluno {
+public class AlunoEntity {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

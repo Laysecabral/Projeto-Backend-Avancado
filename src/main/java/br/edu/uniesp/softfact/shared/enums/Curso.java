@@ -1,4 +1,4 @@
-package br.edu.uniesp.softfact.aluno.enums;
+package br.edu.uniesp.softfact.shared.enums;
 
 
 public enum Curso {
