@@ -25,3 +25,4 @@ public class Certificado {
     @Column(nullable = false)
     private LocalDate dataEnvio;
 }
+
