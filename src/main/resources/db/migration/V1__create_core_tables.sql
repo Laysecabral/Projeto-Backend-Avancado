@@ -1,4 +1,4 @@
--- Tabelas: stacks, alunos, certificados externos, e a join aluno_stack.
+-- Tabelas: stacks, alunos, e a join aluno_stack.
 
 create table if not exists tb_softfact_stack (
                                                  id           bigserial primary key,
@@ -35,15 +35,4 @@ create table if not exists tb_softfact_aluno_stack (
     on delete cascade
     );
 
-create table if not exists tb_softfact_certificado_ext (
-                                                           id          bigserial primary key,
-                                                           aluno_id    bigint     not null,
-                                                           descricao   varchar(255) not null,
-    arquivo_url varchar(500),
-    data_envio  date       not null,
-    constraint fk_cert_ext__aluno
-    foreign key (aluno_id) references tb_softfact_aluno(id)
-    on delete cascade
-    );
-
-create index if not exists idx_cert_ext_aluno on tb_softfact_certificado_ext (aluno_id);
+create index if not exists idx_aluno_stack_aluno_id on tb_softfact_aluno_stack (aluno_id);
